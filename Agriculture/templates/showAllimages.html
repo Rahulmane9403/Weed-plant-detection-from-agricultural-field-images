@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>images</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            background: gray;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        li{
+            float: left;
+        }
+        nav a{
+            width: 120px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            background:#594848;
+            font-size: 17px;
+            color: white;
+            padding: 20px 10px;
+            font-family:Arial ;
+        }
+        nav a:hover{
+            background: skyblue;
+            color:black;
+        }
+        .container{
+            max-width: 1200px;
+            margin: auto;
+            background: #f2f2;
+            overflow: auto;
+        }
+        .gallery{
+            margin: 5px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 390px;
+        }
+        .gallery img{
+            width: 100%;
+            height: auto;
+        }
+        .desc{
+            padding: 15px;
+            text-align: center;
+        }
+        footer{
+            padding: 10px;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: center;
+            background-color: #594848;
+            color: white;
+            font-family: Arial;
+            letter-spacing: 1px;
+
+
+               }
+    </style>
+    </head>
+    <body>
+        <nav>
+            <li><a href="#">Show_All_images</a></li>
+            <li><a href="#home">home</a></li>
+            
+        </nav>
+    
+        <div class="gallery">
+            <img src=" ">
+      </div>
+      
+        <div class="gallery">
+            <img src="{%  'media' %}" style="width:300px;height:250px;" >
+        </div>
+            
+                <div class="gallery">
+                    <img src="{%  'media' %}" style="width:500px;height:300px;">
+                </div>
+                 
+                        <div class="gallery">
+                            <img src="{%  'media' %}" style="width:500px;height:300px;">
+                        </div>
+                        
+                            <div class="gallery">
+                                <img src=" {%  'static' %}" style="width:500px;height:300px;">
+                            </div>
+                          
+                                <div class="gallery">
+                                    <img src="{%  'media' %}" style="width:500px;height:300px;">
+                                </div>
+                                <div class="gallery">
+                                    <img src="{%  'media' %}" style="width:500px;height:300px;">
+                                </div>
+                                <footer>
+                                    
+                                  </footer>
+
+    </body>
+    </html>
+    

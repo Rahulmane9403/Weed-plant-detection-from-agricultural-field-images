@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color: powderblue;">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  </style>
+  
+  <body>
+  
+  <div class="topnav">
+    <a href='showAllimages'>Show_All_images</a>
+    <a href="#Dectacted_images">Dectacted_images</a>
+    
+  </div>
+
+
+  {% comment %} <div class="alert alert-primary alert-dismissible fade show" role="alert">
+  <strong>Welcome to Our Detection Page!</strong> Here you can choose image from by selecting Choose File from below and click on upload image to start your detection.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div> {% endcomment %}
+  
+
+  <div style="padding-left:16px">
+    <h2>Welcome To Image Detection</h2>
+    
+  </div>
+
+  
+
+  
+  </body>
+  
+  
+
+  
+{% block content %}
+  <h2>Upload images</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="document">
+    <button type="submit" class="btn btn-light">upload images</button>
+  </form>
+  {% if url %}
+    <p>Uploaded file:<a href="{{ url }}">{{ url }}</a></p>
+     <img src="{{url}}" alt=" " style="width:500px;height:300px;"> 
+  {% endif %}
+
+{% endblock %}
+
+
+
+</body>
+</html>

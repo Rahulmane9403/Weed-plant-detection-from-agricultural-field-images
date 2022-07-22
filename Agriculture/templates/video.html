@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% comment %} {% extends 'index.html' %} {% endcomment %}
+<html>
+   
+  <body style="background-color: powderblue;">
+    
+
+{% block content %}
+  <h2>Upload video</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="video/mp4,video/x-m4v,video/">
+    <button type="submit">Upload video</button>
+    
+  </form>{% if url %}
+  <p>Uploaded video <a href="{{ url }}">{{ url }}</a></p>
+  
+<video width="500" height="300" controls>
+  <source src="{{url}}" type="video/mp4">
+</video>
+</body>
+</html>
+{% endif %}
+
+  
+  
+  
+
+{% endblock %}
